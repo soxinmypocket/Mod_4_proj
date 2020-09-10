@@ -1,193 +1,199 @@
 body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header{
+  box-sizing: border-box;
+  background-color: #C8ACAE;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 10vh;
+}
+
+.e-commerce-container{
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  justify-content: center;
+}
+
+.item-card-simplified{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-button {
+  margin: auto;
+  display: flex;
+  border: 2px solid rgb(70, 70, 136);
+  background-color: rgb(64, 73, 112);
+  color: white;
+  border-radius: 5px;
+  height: 30px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.cart-button:hover {
+  background-color: silver;
+  transition: 0.1s ease-in;
+}
+
+.item-card-simplified > *,  .item-card-simplified > * > *{
+  margin: 2px;
+}
+
+.item-card-simplified > div {
+  display: flex;
+}
+
+.item-card-simplified-image {
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+.item-card-simplified-button {
+  margin: auto;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 0;
+  margin-left: 2px;
+}
+
+.item-button {
+  margin: auto;
+  display: flex;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.05em;
+}
+
+.item-button:focus, .item-card-simplified-button:focus, .cart-button:focus{
+  outline: 0;
+}
+
+.item-button:hover, .item-card-simplified-button:hover {
+  background-color: silver;
+  transition: 0.1s ease-in;
+}
+
+.item-card {
+  background-color: #F5F5F5;
+  color: rgb(100, 93, 93);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.main-component {
+  box-sizing: border-box;
+  /* border-left: 2px solid black;
+  border-right: 2px solid black; */
+  padding: 5px;
+  margin: 0 10%;
+  height: 85vh;
+  text-align: center;
+  /* overflow-y: scroll; */
+  background-color: white;
+}
+
+.item-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+}
+
+.left-menu {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.left-menu > div, .right-menu > div > div  {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.order-component {
+  border: 2px solid rgb(67, 68, 71);
+  padding: 4px;
+  margin: 4px;
   
-  .navbar{
-    box-sizing: border-box;
-    background-color: #2F4F4F;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    height: 10vh;
-  }
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  justify-content: center;
+}
+
+.right-menu > div > div:hover {
+  border: 3px solid white;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.logo {
+  font-size: 50px;
+  font-family: cursive;
   
-  .e-commerce-container{
-    display: grid;
-    grid-template-columns: 32% 32% 32%;
-    grid-gap: 10px;
-    background-color: #fff;
-    color: #444;
-    justify-content: center;
-  }
-  
-  .item-card-simplified{
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .cart-button {
-    margin: auto;
-    display: flex;
-    border: 2px solid rgb(70, 70, 136);
-    background-color: rgb(64, 73, 112);
-    color: white;
-    border-radius: 5px;
-    height: 30px;
-    cursor: pointer;
-    margin: auto;
-  }
-  
-  .cart-button:hover {
-    background-color: silver;
-    transition: 0.1s ease-in;
-  }
-  
-  .item-card-simplified > *,  .item-card-simplified > * > *{
-    margin: 2px;
-  }
-  
-  .item-card-simplified > div {
-    display: flex;
-  }
-  
-  .item-card-simplified-image {
-    display: block;
-    height: 20px;
-    width: 20px;
-  }
-  
-  .item-card-simplified-button {
-    margin: auto;
-    display: flex;
-    border: 2px solid black;
-    border-radius: 10px;
-    height: 20px;
-    cursor: pointer;
-    margin-right: 0;
-    margin-left: 2px;
-  }
-  
-  .item-button {
-    margin: auto;
-    display: flex;
-    /* border: 2px solid black; */
-    border-radius: 10px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 1.05em;
-  }
-  
-  .item-button:focus, .item-card-simplified-button:focus, .cart-button:focus{
-    outline: 0;
-  }
-  
-  .item-button:hover, .item-card-simplified-button:hover {
-    background-color: silver;
-    transition: 0.1s ease-in;
-  }
-  
-  .item-card {
-    background-color: rgba(194, 194, 194, 0.842);
-    color: rgb(100, 93, 93);
-    border-radius: 5px;
-    padding: 10px;
-  }
-  
-  .main-component {
-    box-sizing: border-box;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    padding: 5px;
-    margin: 0 10%;
-    height: 85vh;
-    text-align: center;
-    overflow-y: scroll;
-  }
-  
-  .item-image {
-    display: block;
-    width: 100%;
-    height: 200px;
-    margin: 0;
-  }
-  
-  .left-menu {
-    display: flex;
-    justify-content: space-around;
-    color: white;
-  }
-  
-  .left-menu > div, .right-menu > div > div  {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: 3px solid black;
-  }
-  
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .order-component {
-    border: 2px solid rgb(67, 68, 71);
-    padding: 4px;
-    margin: 4px;
-    
-  }
-  
-  .order-item {
-    display: grid;
-    grid-template-columns: 32% 32% 32%;
-    grid-gap: 10px;
-    background-color: #fff;
-    color: #444;
-    justify-content: center;
-  }
-  
-  .right-menu > div > div:hover {
-    border: 3px solid white;
-    transition: 0.2s ease-in;
-    cursor: pointer;
-  }
-  
-  select {
-    border: 2px solid white;
-    border-right: none;
-    display: block;
-    height: 30px;
-    background-color: white;
-  }
-  
-  select:focus {
-    outline-color: silver;
-  }
-  
-  input[type=text] {
-    padding: 0;
-    border: 0;
-    border-radius: 5px;
-    width: 30em;
-    border-left: none;
-    background-color: white;
-    display: block;
-    height: 30px;
-  }
-  
-  input[type=text]:focus{
-    outline-color: silver;
-  }
-  
-  .filter {
-    display: flex;
-  }
-  
-  .right-menu{
-    color: white;
-  }
-  
-  .items-container {
-    display: flex;
-    cursor: pointer;
-  }
+}
+
+select {
+  border: 2px solid white;
+  border-right: none;
+  display: block;
+  height: 30px;
+  background-color: white;
+}
+
+select:focus {
+  outline-color: silver;
+}
+
+input[type=text] {
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  width: 30em;
+  border-left: none;
+  background-color: white;
+  display: block;
+  height: 30px;
+}
+
+input[type=text]:focus{
+  outline-color: silver;
+}
+
+.filter {
+  display: flex;
+}
+
+.right-menu{
+  color: white;
+}
+
+.items-container {
+  display: flex;
+  cursor: pointer;
+}
