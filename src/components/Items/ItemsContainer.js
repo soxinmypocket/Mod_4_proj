@@ -6,7 +6,7 @@ const ItemsContainer = (props) => {
     const {items, cart, handleAddToCart} = props
         return(
             <div>
-              <h1>Home Page</h1>
+              <h1>Womens</h1>
              { <div className="e-commerce-container">
                 {
                     items.map(item => <ItemCard

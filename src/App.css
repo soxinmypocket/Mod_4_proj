@@ -4,14 +4,63 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+
+
+
+
+
+/* -------Header----------- */
+.left-menu {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+.left-menu > div, .right-menu > div > div  {
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* border: 3px solid black; */
+}
+
+.right-menu > div > div:hover {
+  border: 3px solid white;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.logo {
+  font-size: 45px;
+  /* font-family: cursive; */
+  color: white;
+  text-align: center;
+  
+}
+
+.right-menu{
+  color: white;
+}
+
+.items-container {
+  display: flex;
+  cursor: pointer;
+}
+
 .header{
   box-sizing: border-box;
   background-color: #C8ACAE;
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  height: 10vh;
+  height: 12vh;
 }
+/* ----------------------------------------------- */
+
+
+
+
+
+
+
+
 
 .e-commerce-container{
   display: grid;
@@ -113,7 +162,7 @@ body{
   height: 200px;
   margin: 0;
 }
-
+/* 
 .left-menu {
   display: flex;
   justify-content: space-around;
@@ -124,7 +173,7 @@ body{
   padding: 10px 20px;
   border-radius: 5px;
   border: 3px solid black;
-}
+} */
 
 .icon {
   width: 20px;
@@ -147,7 +196,7 @@ body{
   justify-content: center;
 }
 
-.right-menu > div > div:hover {
+/* .right-menu > div > div:hover {
   border: 3px solid white;
   transition: 0.2s ease-in;
   cursor: pointer;
@@ -156,7 +205,7 @@ body{
   font-size: 50px;
   font-family: cursive;
   
-}
+} */
 
 select {
   border: 2px solid white;
@@ -189,11 +238,11 @@ input[type=text]:focus{
   display: flex;
 }
 
-.right-menu{
+/* .right-menu{
   color: white;
 }
 
 .items-container {
   display: flex;
   cursor: pointer;
-}
+} */

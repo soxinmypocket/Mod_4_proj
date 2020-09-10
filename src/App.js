@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header'
 import MainContainer from './components/MainContainer'
+import HomePage from './components/HomePage'
 
 
 class App extends React.Component {
@@ -14,16 +15,28 @@ class App extends React.Component {
     selectedCategory: "all",
     searchFilter: "",
     categories: [],
-    categories: []
    }
 
-//Adds items from cat to order
+//Adds items from cart to order
    placeOrder = (items) => {
+    console.log(items)
     this.setState({
       orders: [...this.state.orders, items],
       cart: []
     })
-  }
+
+      fetch('http://localhost:3000/orders',{
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(items) 
+    })
+    .then(r => r.json())
+    .then (items => console.log(items))
+    }
+   
+  
 
 //Categories
 handleSelectedCategory = (selectedCategory) => {
@@ -101,7 +114,8 @@ handleSearchFilter = (searchFilter) => {
   render(){
     return (
       <div className="App">
-          
+         
+
           <Header 
           header={this.state.header} 
           clickHeader={this.clickHeader}
@@ -109,13 +123,22 @@ handleSearchFilter = (searchFilter) => {
           handleSelectedCategory={this.handleSelectedCategory}
           categories={this.state.categories}
           />
+
+          <Switch>
+          <Route exact path="/home" component={prop => <HomePage />} />
+          </Switch>
         {/* <Switch> 
           <Route path="cart" exact>
             
           </Route>
         </Switch> */}
+        {/* <Switch>
+        <HomePage />
+        </Switch>
+         */}
 
         <Switch> 
+        {/* <Route exact path="/womens" component={prop => <HomePage />} /> */}
           <MainContainer 
             items={this.handleSearch(this.handleSort(this.state.items))}
             orders={this.state.orders} 

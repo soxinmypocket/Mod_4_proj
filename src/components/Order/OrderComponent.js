@@ -10,7 +10,7 @@ class OrderComponent extends Component {
           <h4> Order Date </h4>
           <div className="order-item">
             {
-                order.map(item => <OrderItemCard item={item}/>)
+                order.map(item => <OrderItemCard item={item} key={item.id}/>)
             }
           </div>
           
