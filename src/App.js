@@ -4,6 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header'
 import MainContainer from './components/MainContainer'
 import HomePage from './components/HomePage'
+import CartContainer from './components/Cart/CartContainer';
+import OrderComponent from './components/Order/OrderComponent';
 
 
 class App extends React.Component {
@@ -33,6 +35,7 @@ class App extends React.Component {
       body: JSON.stringify(items) 
     })
     .then(r => r.json())
+    .then(alert("Your order has been placed!"))
     .then (items => console.log(items))
     }
    
@@ -124,21 +127,14 @@ handleSearchFilter = (searchFilter) => {
           categories={this.state.categories}
           />
 
-          <Switch>
-          <Route exact path="/home" component={prop => <HomePage />} />
-          </Switch>
-        {/* <Switch> 
-          <Route path="cart" exact>
-            
-          </Route>
-        </Switch> */}
-        {/* <Switch>
-        <HomePage />
-        </Switch>
-         */}
+       <Switch>
+          
+          <Route exact path="/home" component={ prop =>
+             <HomePage />
+            }/>
 
-        <Switch> 
-        {/* <Route exact path="/womens" component={prop => <HomePage />} /> */}
+         
+
           <MainContainer 
             items={this.handleSearch(this.handleSort(this.state.items))}
             orders={this.state.orders} 
@@ -148,11 +144,12 @@ handleSearchFilter = (searchFilter) => {
             handleAddToCart={this.handleAddToCart}
             handleRemoveFromCart={this.handleRemoveFromCart}
           />
-        </Switch>
         
+       </Switch> 
       </div>
     );
   }
 }
+
 
 export default App;

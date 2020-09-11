@@ -1,6 +1,58 @@
 import React from 'react';
 
 const CartCard = (props) => {
+  const {item, item: {image_url, name, price, description}, handleRemoveFromCart} = props
+  return (
+    <div >
+
+      <div class="row">
+      <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        {/* <span class="text-muted">Your cart</span> */}
+        <span class="badge badge-secondary badge-pill"></span>
+      </h4>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+          <img alt={name} className="item-card-simplified-image" src={image_url}/>
+            <h6 class="my-0">{name}</h6>
+            <small class="text-muted">{description}</small>
+          </div>
+          <span class="text-muted">${price}</span>
+          <button onClick={() =>  handleRemoveFromCart(item)} className="button">Remove from Cart</button>
+        </li>
+      </ul>
+  </div>
+</div>
+</div>
+  )
+}
+
+{/* <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Your cart</span>
+        <span class="badge badge-secondary badge-pill">3</span>
+      </h4>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">{name}</h6>
+            <small class="text-muted">{description}</small>
+          </div>
+          <span class="text-muted">${price}</span>
+        </li>
+        
+      </ul>
+  </div>
+</div> */}
+
+export default CartCard; 
+
+
+{/* import React from 'react';
+
+const CartCard = (props) => {
   const {item, item: {image_url, name, price}, handleRemoveFromCart} = props
   return (
     <div className="item-card-simplified">
@@ -14,10 +66,7 @@ const CartCard = (props) => {
   )
 }
 
-export default CartCard;
-
-
-
+export default CartCard; */}
 
 
 

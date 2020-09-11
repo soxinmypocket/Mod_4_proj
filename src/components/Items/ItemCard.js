@@ -8,7 +8,9 @@ const ItemCard = (props) => {
             
             {/* <h2>{name}</h2> */}
             <img className="item-image" src={image_url} alt={name}/>
-            <p>{name}</p>
+            <h4>{name}</h4>
+            <p>{description}</p>
+
             <p>Price: ${price}</p> 
              <button disabled={cart.includes(item)} onClick={() => handleAddToCart(props.item)} className="item-button"> 
                 <div>
@@ -22,11 +24,11 @@ const ItemCard = (props) => {
               </button>     
               
  {/* ADD MODAL FOR PRODUCT DESCRIPTION */}
-             <button disabled className="item-button">
+             {/* <button disabled className="item-button">
                  <i className="material-icons">
                      add
                  </i>
-             </button>
+             </button> */}
         </div>
     )
 }
