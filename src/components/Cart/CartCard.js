@@ -1,53 +1,56 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button'
+import Table from 'react-bootstrap/Table'
 
 const CartCard = (props) => {
+  console.log(props)
   const {item, item: {image_url, name, price, description}, handleRemoveFromCart} = props
   return (
-    <div >
 
-      <div class="row">
-      <div class="col-md-4 order-md-2 mb-4">
-      <h4 class="d-flex justify-content-between align-items-center mb-3">
-        {/* <span class="text-muted">Your cart</span> */}
-        <span class="badge badge-secondary badge-pill"></span>
-      </h4>
-      <ul class="list-group mb-3">
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-          <img alt={name} className="item-card-simplified-image" src={image_url}/>
-            <h6 class="my-0">{name}</h6>
-            <small class="text-muted">{description}</small>
-          </div>
-          <span class="text-muted">${price}</span>
-          <button onClick={() =>  handleRemoveFromCart(item)} className="button">Remove from Cart</button>
-        </li>
-      </ul>
-  </div>
-</div>
-</div>
+    <Table striped borderless hover>
+  <tbody>
+    <tr>
+      <td><img className="item-card-simplified-image" src={image_url}></img></td>
+      <td>{name}</td>
+      <td>{description}</td>
+      <td>{price}</td>
+      <td><Button variant="light" size="sm"onClick={() =>  handleRemoveFromCart(item)} className="button">Remove</Button></td>
+    </tr>
+  </tbody>
+</Table>
   )
 }
 
-{/* <div class="row">
-    <div class="col-md-4 order-md-2 mb-4">
-      <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span class="text-muted">Your cart</span>
-        <span class="badge badge-secondary badge-pill">3</span>
-      </h4>
-      <ul class="list-group mb-3">
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">{name}</h6>
-            <small class="text-muted">{description}</small>
-          </div>
-          <span class="text-muted">${price}</span>
-        </li>
-        
-      </ul>
-  </div>
-</div> */}
-
 export default CartCard; 
+
+//DONT TOUCH 
+// const CartCard = (props) => {
+//   const {item, item: {image_url, name, price, description}, handleRemoveFromCart} = props
+//   return (
+//     <div >
+
+//       <div class="row">
+//       <div class="col-md-4 order-md-2 mb-4">
+//       <h4 class="d-flex justify-content-between align-items-center mb-3">
+//         <span class="badge badge-secondary badge-pill"></span>
+//       </h4>
+//       <ul class="list-group mb-3">
+//         <li class="list-group-item d-flex justify-content-between lh-condensed">
+//           <div>
+//           <img alt={name} className="item-card-simplified-image" src={image_url}/>
+//             <h6 class="my-0">{name}</h6>
+//             <small class="text-muted">{description}</small>
+//           </div>
+//           <span class="text-muted">${price}</span>
+//           <Button variant="primary" size="sm"onClick={() =>  handleRemoveFromCart(item)} className="button">Remove
+//           </Button>
+//         </li>
+//       </ul>
+//   </div>
+// </div>
+// </div>
+//   )
+// }
 
 
 {/* import React from 'react';

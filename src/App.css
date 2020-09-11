@@ -6,7 +6,9 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
-
+.footer.container py-5 {
+  background-color: #C8ACAE;
+}
 
 
 
@@ -166,6 +168,9 @@ body{
   height: 175;
   margin: 0;
 }
+/* .item-image img:hover {
+  background-color: yellow;
+} */
 /* 
 .left-menu {
   display: flex;

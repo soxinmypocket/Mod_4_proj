@@ -7,7 +7,7 @@ class OrderComponent extends Component {
     return (
       <div className="order-component">
           <h3>Order Number {number}</h3>
-          <h4> Order Date </h4>
+          <h4> Order Date September 11, 2020 </h4>
           <div className="order-item">
             {
                 order.map(item => <OrderItemCard item={item} key={item.id}/>)
