@@ -12,7 +12,7 @@ body{
 
 
 /* -------Header----------- */
-.left-menu {
+/* .left-menu {
   display: flex;
   justify-content: space-around;
   color: white;
@@ -22,7 +22,7 @@ body{
   padding: 10px 20px;
   border-radius: 5px;
   /* border: 3px solid black; */
-} 
+/* } 
 
 .right-menu > div > div:hover {
   border: 3px solid white;
@@ -31,9 +31,9 @@ body{
 }
 
 .logo {
-  font-size: 45px;
+  font-size: 45px; */
   /* font-family: cursive; */
-  color: white;
+  /* color: white;
   text-align: center;
   top: 10px;
   
@@ -54,8 +54,14 @@ body{
   display: flex;
   justify-content: space-between;
   padding: 20px; 
-  height: 12vh; 
-}
+  height: 12vh;  */
+/* }  */
+
+
+
+
+
+
 
 
 

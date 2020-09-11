@@ -132,6 +132,8 @@ handleSearchFilter = (searchFilter) => {
           <Route exact path="/home" component={ prop =>
              <HomePage />
             }/>
+            {/* <Route exact path="items" component={ prop =>
+            <MainContainer items={this.state.items} />}/> */}
 
          
 
