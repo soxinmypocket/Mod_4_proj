@@ -19,7 +19,7 @@ const ItemCard = (props) => {
                     </i>
                 </div>      
                   <div>
-                    {cart.includes(item) ? "Already in Cart" : "Add to Cart"} 
+                    {cart.includes(item) ? "Already in Cart" : " "} 
                 </div> 
               </button>     
               

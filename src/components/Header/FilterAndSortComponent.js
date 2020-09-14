@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SortComponent from './SortComponent'
-import FilterComponent from './FilterComponent'
+//import FilterComponent from './FilterComponent'
 
 class FilterAndSortComponent extends Component {
   render() {
@@ -8,7 +8,7 @@ class FilterAndSortComponent extends Component {
     return (
       <div className="filter">
           <SortComponent categories={categories} handleSelectedCategory={handleSelectedCategory}/>
-          <FilterComponent handleSearchFilter={handleSearchFilter}/>
+          {/* <FilterComponent handleSearchFilter={handleSearchFilter}/> */}
       </div>
     );
   }

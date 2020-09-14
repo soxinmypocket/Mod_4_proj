@@ -10,6 +10,23 @@ body{
   background-color: #C8ACAE;
 }
 
+.d-block {
+  height: 50 px;
+}
+a {
+  /* color: #007bff; */
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+}
+.bg-light {
+  /* background-color: #f8f9fa!important; */
+  background-color: #C8ACAE;
+}
+.table td {
+  text-align: center;
+  vertical-align: left;
+}
 
 
 

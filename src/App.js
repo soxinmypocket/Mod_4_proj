@@ -13,7 +13,7 @@ class App extends React.Component {
     items: [],
     orders: [],
     cart: [],
-    header: "items",
+    header: "home",
     selectedCategory: "all",
     searchFilter: "",
     categories: [],
@@ -118,7 +118,7 @@ handleSearchFilter = (searchFilter) => {
     return (
       <div className="App">
          
-
+         
           <Header 
           header={this.state.header} 
           clickHeader={this.clickHeader}
@@ -126,12 +126,13 @@ handleSearchFilter = (searchFilter) => {
           handleSelectedCategory={this.handleSelectedCategory}
           categories={this.state.categories}
           />
-
-       <Switch>
+   <Switch>
+       
           
           <Route exact path="/home" component={ prop =>
              <HomePage />
             }/>
+
             {/* <Route exact path="items" component={ prop =>
             <MainContainer items={this.state.items} />}/> */}
 
