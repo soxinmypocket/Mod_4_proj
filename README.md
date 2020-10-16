@@ -4,6 +4,6 @@ Elm
 
 Demo
 ![items](items page.png)
-![ElmBanner](ElmBanner.png)
-![ElmBanner](ElmBanner.png)
-![ElmBanner](ElmBanner.png)
+![itemsadded](ElmBanner.png)
+![cart](orderplaced.png)
+![oastorders](pastorders.png)
