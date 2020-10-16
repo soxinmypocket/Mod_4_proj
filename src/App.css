@@ -1,5 +1,3 @@
-
-
 body{
   margin: 0;
   padding: 0;
@@ -13,77 +11,23 @@ body{
 .d-block {
   height: 50 px;
 }
+
 a {
   /* color: #007bff; */
   color: black;
   text-decoration: none;
   background-color: transparent;
 }
+
 .bg-light {
   /* background-color: #f8f9fa!important; */
   background-color: #C8ACAE;
 }
+
 .table td {
   text-align: center;
   vertical-align: left;
 }
-
-
-
-/* -------Header----------- */
-/* .left-menu {
-  display: flex;
-  justify-content: space-around;
-  color: white;
-}
-
-.left-menu > div, .right-menu > div > div  {
-  padding: 10px 20px;
-  border-radius: 5px;
-  /* border: 3px solid black; */
-/* } 
-
-.right-menu > div > div:hover {
-  border: 3px solid white;
-  transition: 0.2s ease-in;
-  cursor: pointer;
-}
-
-.logo {
-  font-size: 45px; */
-  /* font-family: cursive; */
-  /* color: white;
-  text-align: center;
-  top: 10px;
-  
-}
-
-.right-menu{
-  color: white;
-}
-
-.items-container {
-  display: flex;
-  cursor: pointer;
-}
-
-.header{
-  box-sizing: border-box;
-  background-color: #C8ACAE;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px; 
-  height: 12vh;  */
-/* }  */
-
-
-
-
-
-
-
-
-
 
 .e-commerce-container{
   display: grid;
@@ -169,8 +113,6 @@ a {
 
 .main-component {
   box-sizing: border-box;
-  /* border-left: 2px solid black;
-  border-right: 2px solid black; */
   padding: 5px;
   margin: 0 10%;
   height: 85vh;
@@ -185,21 +127,6 @@ a {
   height: 175;
   margin: 0;
 }
-/* .item-image img:hover {
-  background-color: yellow;
-} */
-/* 
-.left-menu {
-  display: flex;
-  justify-content: space-around;
-  color: white;
-}
-
-.left-menu > div, .right-menu > div > div  {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: 3px solid black;
-} */
 
 .icon {
   width: 20px;
@@ -221,17 +148,6 @@ a {
   color: #444;
   justify-content: center;
 }
-
-/* .right-menu > div > div:hover {
-  border: 3px solid white;
-  transition: 0.2s ease-in;
-  cursor: pointer;
-}
-/* .logo {
-  font-size: 50px;
-  font-family: cursive;
-  
-} */ */
 
 select {
   border: 2px solid white;
@@ -263,12 +179,3 @@ input[type=text]:focus{
 .filter {
   display: flex;
 }
-
-/* .right-menu{
-  color: white;
-}
-
-.items-container {
-  display: flex;
-  cursor: pointer;
-} */

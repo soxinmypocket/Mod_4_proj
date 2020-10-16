@@ -1,6 +1,5 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel'
-import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button'
 
 const HomePage = props => (
@@ -18,41 +17,38 @@ const HomePage = props => (
       <p>As we work to reduce the impact of our products.</p>
     </Carousel.Caption>
   </Carousel.Item>
+
   <Carousel.Item>
     <img className="d-block w-100"
       src="https://static.zara.net/photos///2020/I/0/1/p/2587/157/330/2/w/1402/2587157330_9_3_1.jpg?ts=1599577003965"
       alt="Second slide"
     />
-
     <Carousel.Caption>
       <h3>Save with us</h3>
       <p>We are working so that our stores, traditional and online, become more sustainable.</p>
     </Carousel.Caption>
   </Carousel.Item>
+
   <Carousel.Item>
     <img
       className="d-block w-100"
       src="https://static.zara.net/photos///2020/I/0/1/p/3067/324/526/2/w/1373/3067324526_9_3_1.jpg?ts=1598524931477"
       alt="Third slide"
     />
-
-    <Carousel.Caption>
-      
-    </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
 
 {/* ----------------Center Page----------------------------------------------- */}
-      <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-        <div className="col-md-5 p-lg-5 mx-auto my-5">
-          <h1 className="display-4 font-weight-normal">ELM</h1>
-          <p className="lead font-weight-normal">We make the most beautiful essentials, at the best factories, without traditional markups. Free shipping on 2+ items.</p>
-          {/* <a class="btn btn-outline-secondary"  onClick={() => props.clickHeader("items")}>New Arrivals</a> */}
-          <a><Button variant="light" size="sm" onClick={() => props.clickHeader("items")}>New Arrivals</Button></a>
-        </div>
-        <div className="product-device shadow-sm d-none d-md-block"></div>
-      <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-  </div>
+<div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div className="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 className="display-4 font-weight-normal">ELM</h1>
+    <p className="lead font-weight-normal">We make the most beautiful essentials, at the best factories, without traditional markups. Free shipping on 2+ items.</p>
+    <a><Button variant="light" size="sm" onClick={() => props.clickHeader("items")}>New Arrivals</Button></a>
+</div>
+
+<div className="product-device shadow-sm d-none d-md-block"></div>
+  <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
 {/* --------------------FOOTER------------------ */}
 <footer class="container py-5">
   <div class="row">
@@ -101,8 +97,6 @@ const HomePage = props => (
   </div>
 </footer>
   
-  </React.Fragment>
-
-
+</React.Fragment>
 )
 export default HomePage;

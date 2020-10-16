@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import ItemsContainer from './Items/ItemsContainer'
 import OrderContainer from './Order/OrderContainer'
 import CartContainer from './Cart/CartContainer'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-//console.log(this.props.items)
 class MainContainer extends Component {
-    
-    renderItems = () => {
-        const {header, orders, items, placeOrder, cart, handleAddToCart, handleRemoveFromCart} = this.props
-        if(header === "cart"){
-            return <CartContainer 
+ 
+  renderItems = () => {
+    const {header, orders, items, placeOrder, cart, handleAddToCart, handleRemoveFromCart} = this.props
+    if(header === "cart"){
+      return <CartContainer 
                 placeOrder={placeOrder} 
                 cart={cart}
                 handleRemoveFromCart={handleRemoveFromCart}
@@ -30,10 +28,9 @@ class MainContainer extends Component {
   render() {
     return (
       <div className="main-component">
-          {
-              this.renderItems()
-          }
-          
+        {
+          this.renderItems()
+        }  
       </div>
     )
   }

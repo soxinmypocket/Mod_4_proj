@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom';
-//import {Nav} from 'react-bootstrap';
+
 import FilterAndSortComponent from './FilterAndSortComponent'
 
 const Header = (props) => {

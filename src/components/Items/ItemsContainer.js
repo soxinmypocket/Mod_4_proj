@@ -2,12 +2,11 @@ import React from 'react'
 import ItemCard from './ItemCard'
 
 const ItemsContainer = (props) => {
-    //console.log(props.items)
     const {items, cart, handleAddToCart} = props
-        return(
-            <div>
-              {/* <h1>Womens</h1> */}
-             { <div className="e-commerce-container">
+    return(
+        <div>
+        { 
+            <div className="e-commerce-container">
                 {
                     items.map(item => <ItemCard
                         cart = {cart} 
@@ -15,10 +14,11 @@ const ItemsContainer = (props) => {
                         item={item}
                         handleAddToCart={handleAddToCart}
                     />)
-              }
-               </div> }
-          </div>
-      )
+                }
+            </div> 
+        }
+        </div>
+    )
 }
 
 export default ItemsContainer;
