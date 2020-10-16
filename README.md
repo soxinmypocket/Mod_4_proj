@@ -3,7 +3,7 @@ Elm
 ![ElmBanner](ElmBanner.png)
 
 Demo
-![items](items page.png)
-![itemsadded](ElmBanner.png)
+![items](itemspage.png)
+![itemsadded](itemsadded.png)
 ![cart](orderplaced.png)
 ![oastorders](pastorders.png)
