@@ -11,7 +11,7 @@
             { 
                 this.props.cart.length !== 0 ? 
                     <div> 
-                        <button className="cart-button" onClick={() => placeOrder(cart)}>Place Order</button> 
+                        {/* <button className="cart-button" onClick={() => placeOrder(cart)}>Place Order</button>  */}
                         <div className="cart-container"> 
                             {
                                 cart.map(item => <CartCard 
