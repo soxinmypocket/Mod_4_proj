@@ -1,6 +1,6 @@
 Elm
 ===========
-![ElmBanner](ElmBanner.png)
+![images/ElmBanner](ElmBanner.png)
 
 About
 --------------- 
