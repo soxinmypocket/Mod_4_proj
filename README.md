@@ -2,7 +2,13 @@ Elm
 ===========
 ![ElmBanner](ElmBanner.png)
 
+About
+--------------- 
+Elm is a sustainable Women's E-Commerce app with a Sleek UI design. 
+
 Demo
+--------------- 
+
 ![home](Homelayout.png)
 ![items](itemspage.png)
 ![itemsadded](itemsadded.png)
