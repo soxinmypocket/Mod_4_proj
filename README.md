@@ -4,7 +4,7 @@ Elm
 
 About
 --------------- 
-Elm is a sustainable Women's E-Commerce app with a Sleek UI design. 
+Elm is a sustainable Women's E-Commerce app with a Sleek UI design built with React JS frontend and Rails API backend. 
 
 Demo
 --------------- 
