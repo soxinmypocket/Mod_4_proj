@@ -16,7 +16,44 @@ class App extends React.Component {
     categories: [],
   }
 
-//Adds items from cart to order
+//Fetch Items
+componentDidMount(){
+  fetch(`http://localhost:3000/items`)
+  .then(res => res.json())
+  .then(items => 
+     this.setState({
+     items
+    },
+    () => this.handleCategories())
+ )}
+
+ handleCategories = () => {
+  const categories = []
+  this.state.items.forEach(item => {
+    if(!categories.includes(item.category)){
+      categories.push(item.category)
+    }
+  })
+
+  this.setState({
+    categories
+  })
+}
+
+//Categories
+handleSelectedCategory = (selectedCategory) => {
+  this.setState({
+    selectedCategory
+  })
+  }
+  
+  handleSearchFilter = (searchFilter) => {
+  this.setState({
+    searchFilter
+  })
+  }
+
+//Place Order
 placeOrder = (items) => {
   console.log(items)
   this.setState({
@@ -35,30 +72,14 @@ placeOrder = (items) => {
   .then(alert("Your order has been placed!"))
   .then (items => console.log(items))
 }
- 
 
-//Categories
-handleSelectedCategory = (selectedCategory) => {
-this.setState({
-  selectedCategory
-})
-}
-
-handleSearchFilter = (searchFilter) => {
-this.setState({
-  searchFilter
-})
-}
-
-
-//---------------CLICK ON BUTTONS ON HEADER-----------------------
+//Header
 clickHeader = (button) => {
   this.setState({
     header: button
   })
 }
 
-//-----------------------------------------------------------
 handleAddToCart = (item) => {
   this.setState({
     cart: [...this.state.cart, item]
@@ -68,33 +89,6 @@ handleRemoveFromCart = (item) => {
   const removedCart = this.state.cart.filter(cartItem => cartItem.id !== item.id)
   this.setState({
     cart: removedCart
-  })
-}
-
-//_________________________________________________
-
-//Fetch Items
-componentDidMount(){
-  fetch(`http://localhost:3000/items`)
-  .then(res => res.json())
-  .then(items => 
-    //console.log(items),
-     this.setState({
-     items
-    },
-    () => this.handleCategories())
- )}
-
- handleCategories = () => {
-  const categories = []
-  this.state.items.forEach(item => {
-    if(!categories.includes(item.category)){
-      categories.push(item.category)
-    }
-  })
-
-  this.setState({
-    categories
   })
 }
 

@@ -49,7 +49,7 @@ const HomePage = props => (
 <div className="product-device shadow-sm d-none d-md-block"></div>
   <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
 </div>
-{/* --------------------FOOTER------------------ */}
+{/* --------------------FOOTER------------------------------------------------- */}
 <footer class="container py-5">
   <div class="row">
     <div class="col-12 col-md">
